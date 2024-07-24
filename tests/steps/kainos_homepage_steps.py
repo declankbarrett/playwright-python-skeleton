@@ -16,5 +16,4 @@ def accept_cookies(context):
 
 @then('I should have a valid title')
 def check_title(context):
-    heading = context.home_page.getHeading()
-    assert heading == 'True partners change the world together'
+    context.home_page.check_heading()

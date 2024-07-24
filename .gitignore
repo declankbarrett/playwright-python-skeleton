@@ -1,2 +1,3 @@
 python_bdd_project.egg-info/
 tests/__pycache__/
+tests/pages/__pycache__/
