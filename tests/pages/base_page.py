@@ -15,6 +15,11 @@ class BasePage(ABC):
     def expected_heading(self):
         pass
 
+    @property
+    @abstractmethod
+    def expected_title(self):
+        pass
+
 
     def get_heading(self):
         return self.heading.inner_text()
@@ -23,5 +28,11 @@ class BasePage(ABC):
         actual_heading = self.get_heading()
         assert actual_heading == self.expected_heading, (
             f"Expected heading to be '{self.expected_heading}' but got '{actual_heading}'"
+        )
+    
+    def check_title(self):
+        actual_title = self.page.title()
+        assert actual_title == self.expected_title, (
+            f"Expected title to be '{self.expected_title}' but got '{actual_title}'"
         )
     
