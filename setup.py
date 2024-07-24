@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import subprocess
 
 def run_behave_tests():
-    subprocess.run(["behave", "tests/features"])
+    subprocess.run(["behave", "tests/gui/features"])
 
 setup(
     name="python-bdd-project",
@@ -16,7 +16,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "run-tests=tests.test_runner:main",
+            "run-tests=tests.gui.test_runner:main",
         ],
     },
 )

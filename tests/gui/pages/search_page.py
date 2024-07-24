@@ -1,5 +1,5 @@
 from playwright.async_api import Page
-from tests.pages.base_page import BasePage
+from tests.gui.pages.base_page import BasePage
 
 class SearchPage(BasePage):
     def __init__(self, page):

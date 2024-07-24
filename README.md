@@ -22,4 +22,5 @@ Running the tests:
 - behave
 - run-tests 
 These commands will run the full BDD suite of tests, the "run-tests" command can only be run if the 'pip install -e .' command is run because this installs the package neccesary to run the command
+(If any changes are made to the project structure and we want to run the tests using 'run-tests', a fresh 'pip install -e .' is needed for the project to relocate the relevant features)
 To run individual feature we can run behave 'path to feature'

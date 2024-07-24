@@ -2,8 +2,8 @@
 import time
 from behave import given, when, then
 from pages.home_page import HomePage
-from tests.pages.industries_page import IndustriesPage
-from tests.pages.search_page import SearchPage
+from tests.gui.pages.industries_page import IndustriesPage
+from tests.gui.pages.search_page import SearchPage
 
 @given('I navigate to the Kainos homepage')
 def step_given_i_am_on_homepage(context):
