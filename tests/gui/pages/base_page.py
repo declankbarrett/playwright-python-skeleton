@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from playwright.async_api import Page
+from utils.accessibility_check import run_accessibility
 
 class BasePage(ABC):
     
@@ -35,4 +35,7 @@ class BasePage(ABC):
         assert actual_title == self.expected_title, (
             f"Expected title to be '{self.expected_title}' but got '{actual_title}'"
         )
+
+    def check_accessibility(self):
+        run_accessibility(self.page)
     

@@ -7,6 +7,9 @@ def run_gui_tests():
 def run_api_tests():
     subprocess.run(["pytest", "tests/api"])
 
+def run_accessibility_tests():
+    subprocess.run(["behave", "tests/gui/accessibility/features"])    
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python test_runner.py [gui|api]")
@@ -18,8 +21,10 @@ def main():
         run_gui_tests()
     elif test_type == "api":
         run_api_tests()
+    elif test_type == "accessibility":
+        run_accessibility_tests()
     else:
-        print("Unknown test type. Use 'gui' or 'api'.")
+        print("Unknown test type. Use 'gui' or 'api' or 'accessibility.")
         sys.exit(1)
 
 if __name__ == "__main__":

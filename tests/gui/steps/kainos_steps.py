@@ -46,3 +46,11 @@ def check_search_results(context):
     context.search_page = SearchPage(context.page)
     context.search_page.check_search_content()
     time.sleep(1)
+
+@then('I check accessibility for the homepage')
+def check_homepage_accessibility(context):
+    context.home_page.check_accessibility()
+
+@then('I check accessibility for the industries page')
+def check_homepage_accessibility(context):
+    context.industries_page.check_accessibility()

@@ -19,7 +19,7 @@ class HomePage(BasePage):
         return 'Digital Transformation Experts and Workday Partners | Kainos'
 
     def navigate(self):
-        self.page.goto(self.base_url, timeout=5000)
+        self.page.goto(self.base_url, timeout=10000)
 
     def accept_cookies(self):
         self.accept_cookies_locator.click()
