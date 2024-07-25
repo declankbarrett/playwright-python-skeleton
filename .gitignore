@@ -1,3 +1,7 @@
 python_bdd_project.egg-info/
 tests/gui/pages/__pycache__/
 tests/gui/__pycache__/
+tests/api/__pycache__/
+tests/__pycache__
+.pytest_cache
+utils/__pycache__/

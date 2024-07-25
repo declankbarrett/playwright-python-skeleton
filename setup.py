@@ -1,22 +1,19 @@
 from setuptools import setup, find_packages
-import subprocess
-
-def run_behave_tests():
-    subprocess.run(["behave", "tests/gui/features"])
 
 setup(
     name="python-bdd-project",
     version="1.0.0",
     description="A Python project with BDD tests using Behave and Playwright",
     author="Your Name",
-    packages=find_packages(),
+    packages=find_packages(where='tests'),
     install_requires=[
         "behave",
-        "playwright"
+        "playwright",
+        "pytest",  # Ensure pytest is included for API tests
     ],
     entry_points={
         "console_scripts": [
-            "run-tests=tests.gui.test_runner:main",
+            "run-tests=tests.test_runner:main",  # Single entry point for both types of tests
         ],
     },
 )
