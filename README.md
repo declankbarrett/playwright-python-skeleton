@@ -63,3 +63,6 @@ They run across the following browsers and OS:
   - Firefox
 - Mobile
   Through the browserstack guide, playwright with browserstack cannot be used to emulate an iPhone or iOS and any attempts with android result in the device and chrome browser being spun up but the tests not beginning. I experienced a similar issue when attempting this with Playwright and typescript, I put it down to an issue with playwright not being fantastic when working with browserstack
+  The following links can help adjust browsers and OS if need be:
+- https://www.browserstack.com/docs/automate/playwright/browsers-and-os
+- https://www.browserstack.com/list-of-browsers-and-platforms/playwright
