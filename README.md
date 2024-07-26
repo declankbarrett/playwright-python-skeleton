@@ -37,3 +37,22 @@ API:
 - pytest test/api/'file' (to run a specific file)
 - run-tests api
   (This command has the same prerequisites as the GUI version, so if our project is restructured we need to run 'pip install -e . again)
+
+BrowserStack:
+
+- run-tests gui --browserstack
+- browserstack-sdk behave
+
+The tests can be ran on browserstack via the 2 run commands above, you need to adjust the browserstack.yml file to include your credentials first however and ensure you have either installed the relevant libraries manually or through the requirements.txt file
+They run across the following browsers and OS:
+
+- Windows
+  - Chrome
+  - Edge
+  - Firefox (Flaky)
+- macOS
+  - Chrome
+  - Safari
+  - Firefox
+- Mobile
+  Through the browserstack guide, playwright with browserstack cannot be used to emulate an iPhone or iOS and any attempts with android result in the device and chrome browser being spun up but the tests not beginning. I experienced a similar issue when attempting this with Playwright and typescript, I put it down to an issue with playwright not being fantastic when working with browserstack
