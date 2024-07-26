@@ -1,0 +1,5 @@
+browserstack-local
+playwright
+pytest-playwright
+pytest==7.4.4
+browserstack-sdk
