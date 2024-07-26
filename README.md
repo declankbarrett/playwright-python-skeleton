@@ -44,3 +44,22 @@ Accessibility:
 
 At the moment this is set up to use the axe-core js script, but inside a python file, after looking around for alternatives including python axe-core libraries, this is the best I could come to. It reports any and all accessibility issues on the pages, so needs adjustment to only report severe issues. It creates an accessibility report however this is quite extensive due to the number of accessibility issues it found on each page.
 It also uses the feature file and flow from page to page, this could be changed, but due to the optimisation of the accessibility checks themselves not being perfect, I have left this out for now. Overall it doesn't seem like python especially with playwright is a great accessibility testing tool.
+
+BrowserStack:
+
+- run-tests gui --browserstack
+- browserstack-sdk behave
+
+The tests can be ran on browserstack via the 2 run commands above, you need to adjust the browserstack.yml file to include your credentials first however and ensure you have either installed the relevant libraries manually or through the requirements.txt file
+They run across the following browsers and OS:
+
+- Windows
+  - Chrome
+  - Edge
+  - Firefox (Flaky)
+- macOS
+  - Chrome
+  - Safari
+  - Firefox
+- Mobile
+  Through the browserstack guide, playwright with browserstack cannot be used to emulate an iPhone or iOS and any attempts with android result in the device and chrome browser being spun up but the tests not beginning. I experienced a similar issue when attempting this with Playwright and typescript, I put it down to an issue with playwright not being fantastic when working with browserstack

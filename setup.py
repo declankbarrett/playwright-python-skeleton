@@ -9,7 +9,8 @@ setup(
     install_requires=[
         "behave",
         "playwright",
-        "pytest",  # Ensure pytest is included for API tests
+        "pytest",
+        'browserstack-sdk',
     ],
     entry_points={
         "console_scripts": [
