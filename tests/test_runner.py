@@ -23,7 +23,7 @@ def generate_allure_report():
     subprocess.run(["allure", "open", "reports/allure-report"])
 
 def run_accessibility_tests():
-    subprocess.run(["behave", "tests/gui/accessibility/features"])    
+    subprocess.run(["behave", "tests/gui/accessibility/features", "--format", "allure_behave.formatter:AllureFormatter", "--outfile", "reports/allure-results"])    
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
@@ -47,6 +47,7 @@ def main():
     else:
         print("Unknown test type. Use 'gui' or 'api' or 'accessibility.")
         sys.exit(1)
+
     if not use_browserstack:
         generate_allure_report()
 
