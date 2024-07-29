@@ -9,7 +9,6 @@ class BasePage(ABC):
         self.page = page
         self.heading = page.locator('h1')
         
-
     @property
     @abstractmethod
     def expected_heading(self):
@@ -19,7 +18,6 @@ class BasePage(ABC):
     @abstractmethod
     def expected_title(self):
         pass
-
 
     def get_heading(self):
         return self.heading.inner_text()

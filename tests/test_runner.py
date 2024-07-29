@@ -33,7 +33,6 @@ def main():
     if use_browserstack:
         os.environ['USE_BROWSERSTACK'] = '1'
 
-    # Clear previous Allure results
     clear_previous_results()
 
     if test_type == "gui":

@@ -1,6 +1,3 @@
 [behave]
 paths = tests/gui/features
 environment = environment.py
-default_format=plain
-formatter=allure_behave.formatter:AllureFormatter
-log_capture=true
