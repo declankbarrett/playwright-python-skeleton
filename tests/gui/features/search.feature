@@ -1,6 +1,6 @@
 Feature: Test Kainos search feature
 
-  Scenario:
+  Scenario: Test search functionality on Kainos homepage works as expected
     Given I navigate to the Kainos homepage
     When I accept cookies
     Then I should have a valid title for homepage

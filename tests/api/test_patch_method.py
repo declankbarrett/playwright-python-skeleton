@@ -7,7 +7,7 @@ data = {
     "job": "zion resident"
 }
 
-def test_get(playwright: sync_playwright):
+def test_patch (playwright: sync_playwright):
   context = playwright.request.new_context()
   response = context.patch('https://reqres.in/api/users/2', data = data)
 
