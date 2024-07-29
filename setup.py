@@ -4,7 +4,7 @@ setup(
     name="python-bdd-project",
     version="1.0.0",
     description="A Python project with BDD tests using Behave and Playwright",
-    author="Your Name",
+    author="Author name",
     packages=find_packages(where='tests'),
     install_requires=[
         "behave",
