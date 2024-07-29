@@ -1,6 +1,6 @@
 Feature: Test Kainos industries page load
 
-  Scenario:
+  Scenario: Testing accessibility on pages
     Given I navigate to the Kainos homepage
     When I accept cookies
     Then I should have a valid title for homepage

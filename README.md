@@ -42,13 +42,6 @@ API:
 - run-tests api
   (This command has the same prerequisites as the GUI version, so if our project is restructured we need to run 'pip install -e . again)
 
-Accessibility:
-
-- run-tests accessibility
-
-At the moment this is set up to use the axe-core js script, but inside a python file, after looking around for alternatives including python axe-core libraries, this is the best I could come to. It reports any and all accessibility issues on the pages, so needs adjustment to only report severe issues. It creates an accessibility report however this is quite extensive due to the number of accessibility issues it found on each page.
-It also uses the feature file and flow from page to page, this could be changed, but due to the optimisation of the accessibility checks themselves not being perfect, I have left this out for now. Overall it doesn't seem like python especially with playwright is a great accessibility testing tool.
-
 BrowserStack:
 
 - run-tests gui --browserstack
