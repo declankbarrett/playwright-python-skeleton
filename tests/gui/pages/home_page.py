@@ -31,7 +31,3 @@ class HomePage(BasePage):
         self.search_button.click()
         self.search_input_field.fill('test')
         self.search_button_submit.click()
-
-
-
-        

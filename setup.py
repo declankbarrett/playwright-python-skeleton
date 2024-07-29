@@ -16,7 +16,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "run-tests=tests.test_runner:main",  # Single entry point for both types of tests
+            "run-tests=tests.test_runner:main",  # Single entry point for all types of tests
         ],
     },
 )
