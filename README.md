@@ -6,7 +6,8 @@ This is a skeleton for a Python and Playwright testing framework. It encompasses
 - POM (Page object model)
 - Non BDD version of test runs (for comparison)
 - API Testing using playwright
-- Compatibility testing
+- Compatibility testing - BrowserStack
+- Allure as a test result reporter
 - Accessibility testing
 
 # Prerequisites:
@@ -22,7 +23,10 @@ To run the project we have a few commands neccessary:
 - pip install -e .
   (If these do not work, please install modules individually using PIP)
 
-Running the tests:
+# Running the tests:
+
+The run-tests command (when not using browserstack), creates an allure report to give a better visual output of test results. It clears the current result state and overwrites it with the next run. To run the tests without this reporter we have to run the other commands such as "behave" or "pytest"(dependent on the tests you want to run)
+
 GUI:
 
 - behave

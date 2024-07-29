@@ -11,6 +11,8 @@ setup(
         "playwright",
         "pytest",
         'browserstack-sdk',
+        "allure-behave",
+        "allure-pytest",  
     ],
     entry_points={
         "console_scripts": [

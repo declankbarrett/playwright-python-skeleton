@@ -3,7 +3,7 @@ from utils.helpers import check_status_code
 
 expected_status = 204
 
-def test_get(playwright: sync_playwright):
+def test_delete(playwright: sync_playwright):
   context = playwright.request.new_context()
   response = context.delete('https://reqres.in/api/users/2')
 

@@ -3,3 +3,5 @@ playwright
 pytest-playwright
 pytest==7.4.4
 browserstack-sdk
+allure-behave
+allure-pytest
