@@ -9,11 +9,14 @@ setup(
     install_requires=[
         "behave",
         "playwright",
-        "pytest",  # Ensure pytest is included for API tests
+        "pytest",
+        'browserstack-sdk',
+        "allure-behave",
+        "allure-pytest",  
     ],
     entry_points={
         "console_scripts": [
-            "run-tests=tests.test_runner:main",  # Single entry point for both types of tests
+            "run-tests=tests.test_runner:main",  # Single entry point for all types of tests
         ],
     },
 )

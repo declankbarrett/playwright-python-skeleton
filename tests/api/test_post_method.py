@@ -7,7 +7,7 @@ data = {
     "job": "leader"
 }
 
-def test_get(playwright: sync_playwright):
+def test_post(playwright: sync_playwright):
   context = playwright.request.new_context()
   response = context.post('https://reqres.in/api/users', data = data)
 
