@@ -38,8 +38,8 @@ To run individual feature we can run behave 'path to feature'
 
 API:
 
-- pytest test/api (to run full collection)
-- pytest test/api/'file' (to run a specific file)
+- pytest tests/api (to run full collection)
+- pytest tests/api/'file' (to run a specific file)
 - run-tests api
 
 (This command has the same prerequisites as the GUI version, so if our project is restructured we need to run 'pip install -e . again)
