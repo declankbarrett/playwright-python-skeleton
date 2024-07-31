@@ -25,8 +25,8 @@ The run-tests command (when not using browserstack), creates an allure report to
 
 GUI:
 
-- behave
-- run-tests gui
+- Run tests using behave directly`behave`
+- Run tests with test runner which produces report using Allure `run-tests gui`
 
 These commands will run the full BDD suite of tests, the "run-tests" command can only be run if the 'pip install -e .' command is run because this installs the package neccesary to run the command
 (If any changes are made to the project structure and we want to run the tests using 'run-tests', a fresh 'pip install -e .' is needed for the project to relocate the relevant features)
@@ -34,16 +34,14 @@ To run individual feature we can run behave 'path to feature'
 
 API:
 
-- pytest tests/api (to run full collection)
-- pytest tests/api/'fileName' (to run a specific file)
-- run-tests api
-
-(This command has the same prerequisites as the GUI version, so if our project is restructured we need to run 'pip install -e . again)
+- Run full collection: `pytest tests/api`
+- Run specific file: `pytest tests/api/'fileName'`
+- Run test using test runner which uses Allure to create report `run-tests api`
 
 BrowserStack:
 
-- run-tests gui --browserstack
-- browserstack-sdk behave
+- `run-tests gui --browserstack`
+- `browserstack-sdk behave`
 
 The tests can be ran on browserstack via the 2 run commands above, you need to adjust the browserstack.yml file to include your credentials first however and ensure you have either installed the relevant libraries manually or through the requirements.txt file
 They run across the following browsers and OS:
