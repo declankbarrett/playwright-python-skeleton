@@ -8,3 +8,4 @@ utils/__pycache__/
 local.log
 reports/
 __pycache__
+venv/

@@ -12,16 +12,12 @@ This is a skeleton for a Python and Playwright testing framework. It encompasses
 
 # Prerequisites:
 
-Please ensure you have the following installed and up to date
-
-- Python (Can be done through HomeBrew or Python website)
-- pip (Installed with python but ensure it is up to date)
-
 To run the project we have a few commands neccessary:
 
-- pip install -r requirements.txt
-- pip install -e .
-  (If these do not work, please install modules individually using pip)
+1. Setup a virtual environment: `python3 -m venv venv`
+2. Activate it: `source venv/bin/activate`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Install packages: `pip install -e .`
 
 # Running the tests:
 
@@ -39,7 +35,7 @@ To run individual feature we can run behave 'path to feature'
 API:
 
 - pytest tests/api (to run full collection)
-- pytest tests/api/'file' (to run a specific file)
+- pytest tests/api/'fileName' (to run a specific file)
 - run-tests api
 
 (This command has the same prerequisites as the GUI version, so if our project is restructured we need to run 'pip install -e . again)
